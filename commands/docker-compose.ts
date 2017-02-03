@@ -10,7 +10,7 @@ function getDockerComposeFileUris(): Thenable<vscode.Uri[]>{
     if (!hasWorkspaceFolder()) {
         return Promise.resolve(null);
     }
-    return Promise.resolve(vscode.workspace.findFiles('{**/[dD]ocker-[cC]ompose.*.yml,**/[dD]ocker-[cC]ompose.yml}', null, 9999, null));
+    return Promise.resolve(vscode.workspace.findFiles('{**/[dD]ocker-[cC]ompose.*.ya?ml,**/[dD]ocker-[cC]ompose.ya?ml}', null, 9999, null));
 }
 
 interface Item extends vscode.QuickPickItem {
